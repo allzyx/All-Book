@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL BOOK - Library</title>
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+        <header class="content-header-book">
+            <a href="index.html" class="content-header_logo"></a>
+            <p class="content-header_slogan">All books - one place</p>
+            <nav>
+                <ul class="content-header_list">
+                    <li class="content-header_item"><a class="content-header_link active" href="index.html">Главная</a></li>
+                    <li class="content-header_item"><a class="content-header_link active" href="book.html">Книги</a></li>
+                    <li class="content-header_item"><a class="content-header_link active" href="About us.html">О нас</a></li>
+                    <li class="content-header_item"><a class="content-header_link wallet" href="#popup"></a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="content-main">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href="sorcere's stone.html"><img class="img-1" src="images/sorcerer's stone.jpg" alt="" height="200px"></a></div>
+                    <div class="swiper-slide"><a href="chamber of secrets.html"><img class="img-2" src="images/chamber-of-secrets.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href="prisoner of azkaban.html"><img class="img-3" src="images/prisoner-of-azkaban.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href="goblet of fire.html"><img class="img-4" src="images/gablet-of-fire.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href="Order of the Phoenix.html"><img class="img-5" src="images/OrderofthePhoenixfeatured.webp" alt=""></a></div>
+                    <div class="swiper-slide"><a href="half-blood.html"><img class="img-6" src="images/half-blood-spell.jpg" alt=""></a></div>
+                    <div class="swiper-slide"><a href="the-death-hollow.html"><img class="img-7" src="images/the-death-hollow.jpg" alt=""></a></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div id="popup" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#" class="popup__close">X</a>
+                <div class="popup__title">Вы можете поддержать сайт!</div>
+                <div class="popup__text">Мы очень стараемся в разработке и поддержке нашего сайта, мы будем очень рады вашей поддержке <3</div><br>
+                <a class="donat__link" href="https://qiwi.com/transfer">donate</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            direction: "vertical",
+            slidesPerVeiw: 1,
+            spaceBetween: 30,
+            mousewheel: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '">' + (index + 1) + "</span>";
+                },
+            },
+        });
+    </script>
+    <script src="/js/script.js"></script>
+</body>
+</html>

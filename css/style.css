@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital@1&family=Bebas+Neue&family=Oleo+Script&family=Permanent+Marker&family=Roboto+Slab:wght@400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+/* 
+    font-family: 'Arvo', serif;
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Roboto Slab', serif;
+    font-family: 'Oleo Script', cursive;
+    font-family: 'Permanent Marker', cursive;
+*/
+
+body{
+    background: linear-gradient(180deg, #a3dd8c, #285f39);
+    font-family: 'Roboto Slab', serif;
+    font-weight: 500;
+    overflow: hidden;
+}
+
+p{
+    position: absolute;
+    margin-left: 115px;
+}
+
+body, html{
+    height: 100vh;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: 6% 1fr;
+    grid-template-rows: 98px 1fr;
+    height: 100%;
+    gap: 0%;
+}
+
+.content-sidebar{
+    grid-column: 1/2;
+    grid-row: 1/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #1a9457;
+    border-right: 2px solid rgb(0, 0, 0);
+}
+
+.content-sidebar_list{
+    list-style: none;
+    margin-bottom: 60px;
+    padding-left: 0;
+}
+
+.content-sidebar_item{
+    margin-top: 100%;
+}
+
+.content-sidebar_link{
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 50%;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    position: relative;
+}
+
+.content-sidebar_tg{
+    background-image: url(../images/tg-black.svg); 
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+}
+
+.content-sidebar_tg:hover{
+    background-image: url(../images/tg-hover.png); 
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a.content-sidebar_tw{
+    background-image: url(../images/tw-black.png); 
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content-sidebar_tw:hover{
+    background-image: url(../images/tw-hover.png); 
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content-sidebar_yt{
+    background-image: url(../images/yt-black.png); 
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 450%;
+}
+
+.content-sidebar_yt:hover{
+    background-image: url(../images/yt-hover.png); 
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content-header{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 70px;
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+.content-header-book {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 70px;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    height: 95px;
+}
+
+.content-header_list{
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.content-header_item{
+    margin-left: 67px;
+}
+
+.content-header_item:first-child{
+    margin-left: 0;
+}
+
+.content-header_link{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.content-header_link.active{
+    font-weight: 800;
+    position: relative;
+}
+
+.content-header_link.active::after{
+    content: '';
+    width: 22px;
+    height: 2px;
+    color: black;
+    display: block;
+    position: absolute;
+    bottom: -14px;
+}
+
+.content-header_link.wallet{
+    background-image: url(../images/wallet-def.png);
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content-header_link.wallet:hover{
+    background-image: url(../images/wallet-hover.png);
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content-header_link:before{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 0; bottom: -5px;
+    transform: scaleX(0);
+    transition: transform 0.75s;
+    transform-origin: right;
+}
+
+.content-header_link:hover:before{
+    color: rgb(0, 0, 0);
+    transform: scaleX(1);
+    transition: transform 0.75s;
+    transform-origin: left;
+}
+
+a:hover{
+    color: white;
+}
+
+.content-header_logo{
+    display: block;
+    width: 103px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/logo.svg);
+    padding: 0;
+    margin: -1%;
+}
+
+.content-header_slogan{
+    font-family: 'Parisienne', cursive;
+    font-size: 150%;
+}
+
+.content-main {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.mail-link {
+    color: rgb(0, 0, 0);
+}
+
+.mail-link:hover {
+    color: white;
+}
+
+.info {
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 2;
+    font-size: 26px;
+    width: 50%;
+    padding: 70px 250px;
+    font-family: 'Bebas Neue', cursive;
+    word-spacing: 4px;
+}
+
+.main-info {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px
+}
+
+.main-slogan {
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    word-spacing: 10px;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.info-image {
+    height: 400px;
+    position: absolute;
+    top: 165px;
+    left: 4%;
+}
+
+.info-image-2 {
+    height: 230px;
+    position: absolute;
+    top: 400px;
+    right: 50px;
+}
+
+.name {
+    font-weight: 900;
+    letter-spacing: 5px;
+    margin-left: 20px;
+}
+
+.title {
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.swiper{
+    height: calc(100vh);
+    width: 100%;
+    margin-left: 0;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    vertical-align: middle;
+  }
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .img-1 {
+    transform: scale(1.07, 1);
+  }
+
+  .img-2 {
+    transform: scale(1, 1.23);
+  }
+
+  .img-3 {
+    transform: scale(1, 1.15);
+  }
+
+  .img-4 {
+    transform: scale(1.15, 1.16);
+  }
+
+  .img-5 {
+    transform: scale(1, 0.97);
+  }
+
+  .img-6 {
+    transform: scale(1.2, 1.3);
+  }
+
+  .img-7 {
+    transform: scale(1.2, 1.4);
+  }
+
+  .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #000;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .swiper-pagination-bullet-active {
+    color: #fff;
+    background: #007aff;
+  }
+
+  .popup {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.473);
+      opacity: 0;
+      visibility: hidden;
+  }
+
+  .popup:target {
+      opacity: 1;
+      visibility: visible;
+      background-color: transparent;
+  }
+
+  .popup__body {
+      min-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 10px;
+  }
+
+  .popup__content {
+      background-color: white;
+      color: #000;
+      max-width: 500px;
+      padding: 40px 50px;
+      position: relative;
+      border: #40644b solid 2px;
+      background-color: #ffffff;
+  }
+
+  .popup__close {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      font-size: 20px;
+      color: black;
+      text-decoration: none;
+  }
+
+  .popup__close:hover {
+      color: red;
+  }
+
+  .popup__title {
+        font-size: 40px;
+        margin-bottom: 1em;
+        text-align: center;
+        font-family: 'Bebas Neue', cursive;
+  }
+
+  .popup__text {
+        text-align: center;
+        font-family: 'Bebas Neue', cursive;
+  }
+
+  .donat__link {
+      float: right;
+      color: green;
+  }
+
+  .donat__link:hover {
+      color:red;
+  }
+
+  .img-celeb {
+      position: absolute;
+      top: 350px;
+      right: 5%;
+  }
